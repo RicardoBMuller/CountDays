@@ -5,50 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Status da Guerra chamada FCC</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #ffe5e5;
-            color: #800000;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #ffe5e5, #ffcccc);
+            color: #4a0000;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             height: 100vh;
             margin: 0;
+            padding: 0 20px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         img {
-            width: 750px;
-            height: 414px;
-            object-fit: cover;
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: #b30000;
             margin: 0;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+            font-weight: 600;
         }
 
         p {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             margin: 0;
+            color: #660000;
         }
 
         .contador {
             margin-top: 20px;
-            font-size: 2rem;
-            font-weight: bold;
+            font-size: 2.2rem;
+            font-weight: 600;
             color: #ff1a1a;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .pergunta {
             margin-top: 20px;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: #cc0000;
             font-style: italic;
+            letter-spacing: 1px;
         }
 
+        .pergunta:hover {
+            color: #ff4d4d;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
+
+            .contador {
+                font-size: 1.8rem;
+            }
+
+            .pergunta {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
